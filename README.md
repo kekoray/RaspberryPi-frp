@@ -4,6 +4,7 @@
 
 
 
+
 ### 1. Server服务端
 
 > 在server(服务器)设置frp  
@@ -15,6 +16,7 @@
    chmod +x SetupServer.sh  
    ./SetupServer.sh  
    ```
+
 2. **修改端口和token即可**  
 
    ```shell
@@ -25,8 +27,8 @@
 
    ```shell
    systemctl daemon-reload # 重载所有修改过的配置文件  
-   systemctl start frps # 启动服务  
-   systemctl enable frps #将服务设置为开机启动  
+   systemctl start frps    # 启动服务  
+   systemctl enable frps   # 将服务设置为开机启动  
    ```
 
 
@@ -46,6 +48,7 @@
    chmod +x SetupClient.sh  
    ./SetupClient.sh  
    ```
+
 2. **修改服务器IP , token , 服务器端口 , 远程端口等即可**
 
    ```shell
@@ -56,8 +59,8 @@
 
    ```shell
    systemctl daemon-reload # 重载所有修改过的配置文件  
-   systemctl start frpc # 启动服务  
-   systemctl enable frpc #将服务设置为开机启动  
+   systemctl start frpc    # 启动服务  
+   systemctl enable frpc   # 将服务设置为开机启动  
    ```
 
    
