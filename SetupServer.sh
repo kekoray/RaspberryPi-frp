@@ -7,4 +7,4 @@ chmod +x /usr/bin/frps
 mkdir -p /etc/frp
 wget -O /etc/frp/frps.ini https://github.com/kekoray/RaspberryPi-frp/blob/main/frps.ini
 wget -O /etc/systemd/system/frps.service https://github.com/kekoray/RaspberryPi-frp/blob/main/frps.service
-rm -r /tmp/frp
+rm -r /tmp/frp 
