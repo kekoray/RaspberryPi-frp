@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 latestVersion=0.36.2
 mkdir -p /tmp/frp
 wget -O /tmp/frp/frp.tar.gz https://github.com/fatedier/frp/releases/download/v${latestVersion}/frp_${latestVersion}_linux_arm.tar.gz
