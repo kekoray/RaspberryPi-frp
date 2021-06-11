@@ -4,6 +4,23 @@
 
 
 
+
+
+添加域名hosts, 并重启
+
+```shell
+echo '185.199.111.133  raw.githubusercontent.com '  >>  /etc/hosts
+echo '185.199.109.133  raw.githubusercontent.com '  >>  /etc/hosts
+echo '185.199.110.133  raw.githubusercontent.com '  >>  /etc/hosts
+echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
+
+
+```
+
+
+
+
+
 ### 1. Server服务端
 
 > 在server(服务器)设置frp  
@@ -11,7 +28,7 @@
 1. **运行以下4句指令**  
 
    ```shell
-   wget https://github.com/kekoray/RaspberryPi-frp/blob/main/SetupServer.sh
+   wget https://raw.githubusercontent.com/kekoray/RaspberryPi-frp/main/SetupServer.sh
    chmod +x SetupServer.sh  
    ./SetupServer.sh  
    ```
@@ -43,7 +60,7 @@
 1. **运行以下4句指令**  
 
    ```shell
-   wget https://github.com/kekoray/RaspberryPi-frp/blob/main/SetupClient.sh
+   wget https://raw.githubusercontent.com/kekoray/RaspberryPi-frp/main/SetupClient.sh
    chmod +x SetupClient.sh  
    ./SetupClient.sh  
    ```

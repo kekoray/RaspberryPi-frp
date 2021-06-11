@@ -5,6 +5,6 @@ tar -C /tmp/frp -zxvf /tmp/frp/frp.tar.gz
 cp /tmp/frp/frp_${latestVersion}_linux_amd64/frps /usr/bin
 chmod +x /usr/bin/frps
 mkdir -p /etc/frp
-wget -O /etc/frp/frps.ini https://github.com/kekoray/RaspberryPi-frp/blob/main/frps.ini
-wget -O /etc/systemd/system/frps.service https://github.com/kekoray/RaspberryPi-frp/blob/main/frps.service
+wget -O /etc/frp/frps.ini https://raw.githubusercontent.com/kekoray/RaspberryPi-frp/blob/main/frps.ini
+wget -O /etc/systemd/system/frps.service https://raw.githubusercontent.com/kekoray/RaspberryPi-frp/blob/main/frps.service
 rm -r /tmp/frp 
