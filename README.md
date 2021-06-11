@@ -62,7 +62,7 @@ echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
    ```shell
    wget https://raw.githubusercontent.com/kekoray/RaspberryPi-frp/main/SetupClient.sh
    chmod +x SetupClient.sh  
-   ./SetupClient.sh  
+   sudo ./SetupClient.sh  
    ```
 
 2. **修改服务器IP , token , 服务器端口 , 远程端口等即可**
