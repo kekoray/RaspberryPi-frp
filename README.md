@@ -4,20 +4,14 @@
 
 
 
-
-
-添加域名hosts, 并重启
+**服务端和客户端都先添加githubusercontent的hosts, 要不然访问不到;**
 
 ```shell
 echo '185.199.111.133  raw.githubusercontent.com '  >>  /etc/hosts
 echo '185.199.109.133  raw.githubusercontent.com '  >>  /etc/hosts
 echo '185.199.110.133  raw.githubusercontent.com '  >>  /etc/hosts
 echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
-
-
 ```
-
-
 
 
 
@@ -30,21 +24,21 @@ echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
    ```shell
    wget https://raw.githubusercontent.com/kekoray/RaspberryPi-frp/main/SetupServer.sh
    chmod +x SetupServer.sh  
-   ./SetupServer.sh  
+   sudo ./SetupServer.sh  
    ```
 
 2. **修改端口和token即可**  
 
    ```shell
-   vim /etc/frp/frps.ini
+   sudo vim /etc/frp/frps.ini
    ```
 
 3. **运行以下3句指令，将frp设置为服务 和 开机自动开启服务**  
 
    ```shell
-   systemctl daemon-reload # 重载所有修改过的配置文件  
-   systemctl start frps    # 启动服务  
-   systemctl enable frps   # 将服务设置为开机启动  
+   sudo systemctl daemon-reload # 重载所有修改过的配置文件  
+   sudo systemctl start frps    # 启动服务  
+   sudo systemctl enable frps   # 将服务设置为开机启动  
    ```
 
 
@@ -68,15 +62,15 @@ echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
 2. **修改服务器IP , token , 服务器端口 , 远程端口等即可**
 
    ```shell
-   vim /etc/frp/frpc.ini  
+   sudo vim /etc/frp/frpc.ini  
    ```
 
 3. **运行以下3句指令，将frp设置为服务 和 开机自动开启服务**  
 
    ```shell
-   systemctl daemon-reload # 重载所有修改过的配置文件  
-   systemctl start frpc    # 启动服务  
-   systemctl enable frpc   # 将服务设置为开机启动  
+   sudo systemctl daemon-reload # 重载所有修改过的配置文件  
+   sudo systemctl start frpc    # 启动服务  
+   sudo systemctl enable frpc   # 将服务设置为开机启动  
    ```
 
    
