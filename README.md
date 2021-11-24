@@ -1,10 +1,12 @@
-# FRP内网穿透搭建
+# RaspberryPi-FRP内网穿透搭建
 
 > FRP软件的官网地址 :  https://gofrp.org/docs/
+>
+> 此教程为**树莓派arm版本**, 其他系统需下载对应的软件包进行操作.
 
 
 
-**服务端和客户端都先添加githubusercontent的hosts, 要不然访问不到;**
+**服务端和客户端都先添加githubusercontent的hosts, 要不然访问不到GitHub;**
 
 ```shell
 echo '185.199.111.133  raw.githubusercontent.com '  >>  /etc/hosts
@@ -19,7 +21,7 @@ echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
 
 > 在server(服务器)设置frp  
 
-1. **运行以下4句指令**  
+1. 获取一键安装的脚本 
 
    ```shell
    wget https://raw.githubusercontent.com/kekoray/RaspberryPi-frp/main/SetupServer.sh
@@ -27,13 +29,13 @@ echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
    sudo ./SetupServer.sh  
    ```
 
-2. **修改端口和token即可**  
+2. 修改**端口和token**即可  
 
    ```shell
    sudo vim /etc/frp/frps.ini
    ```
 
-3. **运行以下3句指令，将frp设置为服务 和 开机自动开启服务**  
+3. 启动服务, 并设置服务开机自启  
 
    ```shell
    sudo systemctl daemon-reload # 重载所有修改过的配置文件  
@@ -53,7 +55,7 @@ echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
 
 > 在client(客户端)设置frp  
 
-1. **运行以下4句指令**  
+1. 获取一键安装的脚本 
 
    ```shell
    wget https://raw.githubusercontent.com/kekoray/RaspberryPi-frp/main/SetupClient.sh
@@ -61,13 +63,13 @@ echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
    sudo ./SetupClient.sh  
    ```
 
-2. **修改服务器IP , token , 服务器端口 , 远程端口等即可**
+2. 修改**服务器IP, token, 服务器端口, 远程端口**等即可
 
    ```shell
    sudo vim /etc/frp/frpc.ini  
    ```
 
-3. **运行以下3句指令，将frp设置为服务 和 开机自动开启服务**  
+3. 启动服务, 并设置服务开机自启  
 
    ```shell
    sudo systemctl daemon-reload # 重载所有修改过的配置文件  
