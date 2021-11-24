@@ -17,6 +17,10 @@ echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
 
 
 
+---
+
+
+
 ### 1. Server服务端
 
 > 在server(服务器)设置frp  
@@ -29,7 +33,7 @@ echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
    sudo ./SetupServer.sh  
    ```
 
-2. 修改**端口和token**即可  
+2. 修改`端口`和`token`即可  
 
    ```shell
    sudo vim /etc/frp/frps.ini
