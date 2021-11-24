@@ -1,7 +1,5 @@
 # RaspberryPi-FRP内网穿透搭建
 
-
-
 > FRP软件的官网地址 :  https://gofrp.org/docs/
 >
 > 此教程为**树莓派arm版本**, 其他系统需下载对应的软件包进行操作.
@@ -23,7 +21,7 @@ echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
 
 
 
-## 1. Server服务端
+### 1. Server服务端
 
 > 在server(服务器)设置frp  
 
@@ -68,7 +66,7 @@ echo '185.199.108.133  raw.githubusercontent.com '  >>  /etc/hosts
    sudo ./SetupClient.sh  
    ```
 
-2. **修改`服务器IP,token,服务器端口,远程端口`等即可**
+2. **修改`服务器IP,token,本地端口,远程端口`等即可**
 
    ```shell
    sudo vim /etc/frp/frpc.ini  
